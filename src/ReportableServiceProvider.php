@@ -6,10 +6,17 @@ namespace BrianFaust\Reportable;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class ReportableServiceProvider 
+ * 
+ * @package BrainFaust\Reportable
+ */
 class ReportableServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
+     * 
+     * @return void
      */
     public function boot()
     {
