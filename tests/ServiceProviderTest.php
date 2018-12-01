@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Tests\Reportable;
+namespace ActivismBE\Tests\Reportable;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 

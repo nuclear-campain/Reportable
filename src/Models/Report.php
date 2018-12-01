@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Reportable\Models;
+namespace ActivismBE\Reportable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\{HasOne, MorphTo};

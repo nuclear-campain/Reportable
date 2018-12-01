@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Reportable\Traits;
+namespace ActivismBE\Reportable\Traits;
 
-use BrianFaust\Reportable\Models\Report;
+use ActivismBE\Reportable\Models\Report;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 

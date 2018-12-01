@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Reportable;
+namespace ActivismBE\Reportable;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Tests\Reportable;
+namespace ActivismBE\Tests\Reportable;
 
-use BrianFaust\Reportable\ReportableServiceProvider;
+use ActivismBE\Reportable\ReportableServiceProvider;
 use Illuminate\Interfaces\Foundation\Application;
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
