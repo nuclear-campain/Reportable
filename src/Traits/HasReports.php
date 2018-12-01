@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace BrianFaust\Reportable\Traits;
 
 use BrianFaust\Reportable\Models\Report;
