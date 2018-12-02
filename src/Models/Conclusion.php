@@ -1,35 +1,53 @@
 <?php
 
-declare(strict_types=1);
-
-/*
- * This file is part of Laravel Reportable.
- *
- * (c) Brian Faust <hello@brianfaust.me>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace BrianFaust\Reportable\Models;
+namespace ActivismBE\Reportable\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\{BelongsTo, MorphTo};
 
+/**
+ * Class Conclusion 
+ * 
+ * @package BrainFaust\Reportable\Mopdels
+ */
 class Conclusion extends Model
 {
+    /**
+     * The database table name for the model. 
+     * 
+     * @return string 
+     */
     protected $table = 'reports_conclusions';
 
+    /**
+     * The attributes that aren't mass assignable. 
+     * 
+     * @return array 
+     */
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
+    /**
+     * The attributes that should be cast to native type. 
+     * 
+     * @return array
+     */
     protected $casts = ['meta' => 'array'];
 
+    /**
+     * Get the conclusion for the Report Model
+     * 
+     * @return BelongsTo
+     */
     public function conclusion(): BelongsTo
     {
         return $this->belongsTo(Report::class);
     }
 
+    /**
+     * Query builder instance for all the judges that have judged the reported entity. 
+     * 
+     * @return MorphTo
+     */
     public function judge(): MorphTo
     {
         return $this->morphTo();

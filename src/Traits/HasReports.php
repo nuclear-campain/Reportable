@@ -1,30 +1,36 @@
 <?php
 
-declare(strict_types=1);
+namespace ActivismBE\Reportable\Traits;
 
-/*
- * This file is part of Laravel Reportable.
- *
- * (c) Brian Faust <hello@brianfaust.me>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace BrianFaust\Reportable\Traits;
-
-use BrianFaust\Reportable\Models\Report;
+use ActivismBE\Reportable\Models\Report;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * Trait HasReports 
+ * 
+ * @package BrainFaust\Reportable\Traits
+ */
 trait HasReports
 {
+    /**
+     * Method for getting a query builder instance for all the reports that are attached to the entity.
+     * 
+     * @return MorphMany
+     */
     public function reports(): MorphMany
     {
         return $this->morphMany(Report::class, 'reportable');
     }
 
-    public function report($data, Model $reportable): Report
+    /**
+     * Create a report for the given entity
+     * 
+     * @param  array $data       The inputs from the form in the application.
+     * @param  Model $reportable The data entity from the item u want to report.
+     * @return Report
+     */
+    public function report(array $data, Model $reportable): Report
     {
         $report = (new Report())->fill(array_merge($data, [
             'reporter_id'   => $reportable->id,
