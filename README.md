@@ -1,16 +1,13 @@
 # Laravel Reportable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Reportable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Reportable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-reportable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Reportable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Reportable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Reportable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Reportable)
+Our comment report system for the portal comments.
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-reportable
+$ composer require b61/laravel-reportable
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
@@ -27,7 +24,7 @@ php artisan vendor:publish --provider="BrianFaust\Reportable\ReportableServicePr
 
 namespace App;
 
-use BrianFaust\Reportable\HasReports;
+use ActivismBE\Reportable\HasReports;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -83,6 +80,7 @@ If you discover a security vulnerability within this package, please send an e-m
 ## Credits
 
 - [Brian Faust](https://github.com/faustbrian)
+- [Tim Joosten](https://github.com/Tjoosten)
 - [All Contributors](../../contributors)
 
 ## License
